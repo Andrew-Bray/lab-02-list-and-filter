@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
 import Header from './Header.js';
-import ImageList from './ImageList.js'
+import ImageList from './ImageList.js';
+import images from './data.js';
 
 export default class App extends React.Component {
-  //   state = {
-  // }
+
+
+
   // nocommas or semi-colons
 
 
@@ -15,8 +17,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <Header name="Andy" />
-        <div>This is some text</div>
-        <ImageList />
+        <ImageList images={images} />
         {/* App.js imports the horned creatures data and passes it to ImageList */}
       </div>
     );

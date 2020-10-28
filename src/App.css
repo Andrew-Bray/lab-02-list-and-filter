@@ -8,8 +8,14 @@
   width: 80%;
 }
 
+.horn-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .horned-animals {
-  width: 300px;
+  max-width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
