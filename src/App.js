@@ -3,13 +3,22 @@ import './App.css';
 import Header from './Header.js';
 import ImageList from './ImageList.js';
 import images from './data.js';
+import DropDown from './DropDown.js'
 
 export default class App extends React.Component {
+  state = {
+    horns: '',
+    feel: '',
+    keyword: '',
+  }
 
-
-
-  // nocommas or semi-colons
-
+  handleChange = e => {
+    this.setState({
+      horns: e.target.value,
+      feel: e.target.value,
+      keyword: e.target.value,
+    });
+  }
 
   render() {
 
@@ -17,8 +26,8 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <Header name="Andy" />
-        <ImageList images={images} />
-        {/* App.js imports the horned creatures data and passes it to ImageList */}
+        <DropDown handleChange={this.handleChange} />
+        <ImageList images={images} horns={this.state.horns} feel={this.state.feel} keyword={this.state.keyword} />
       </div>
     );
   }
